@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pulse VR membership plans. Save up to 30% on VR sessions, get priority booking and exclusive member benefits.">
+    <meta name="keywords" content="VR membership, Pulse VR membership, VR subscription UK">
+    <title>Pulse VR | Membership - Save on VR Gaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html">Pulse VR</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="membership.html" class="active">Membership</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="accessibility.html#map" class="findus-btn">Find Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- page header -->
+<section class="page-header">
+    <div class="container">
+        <h1>MEMBERSHIP</h1>
+        <p>Join Pulse VR membership and save money on every session. Plus get priority booking and exclusive benefits.</p>
+    </div>
+</section>
+
+<!-- savings calculator -->
+<section class="calculator">
+    <div class="container">
+        <div class="calc-box">
+            <h2>How much could you save?</h2>
+            <p>Move the slider to see your savings with Silver membership</p>
+            
+            <div class="calc-control">
+                <label>Sessions per month:</label>
+                <input type="range" id="sessionSlider" min="1" max="10" value="3">
+                <span id="sessionCount" class="slider-value">3 sessions</span>
+            </div>
+            
+            <div class="calc-results">
+                <div class="calc-card">
+                    <h4>Without Membership</h4>
+                    <p class="calc-price" id="nonMemberTotal">£75.00</p>
+                </div>
+                <div class="calc-card">
+                    <h4>With Silver Membership</h4>
+                    <p class="calc-price" id="memberTotal">£59.99</p>
+                    <p class="calc-savings" id="savingsText">You save £15.01 per month!</p>
+                </div>
+            </div>
+            <p class="calc-note">Based on average £25 per session. Members get 20% off all bookings.</p>
+        </div>
+    </div>
+</section>
+
+<!-- membership plans -->
+<section class="plans">
+    <div class="container">
+        <h2>CHOOSE YOUR PLAN</h2>
+        <div class="plans-grid">
+            
+            <!-- Bronze Plan -->
+            <div class="plan-card plan-selectable" data-plan="bronze" onclick="selectPlan('bronze')">
+                <h3>Bronze</h3>
+                <div class="price">
+                    <span class="currency">£</span>
+                    <span class="amount">19.99</span>
+                    <span class="period">/month</span>
+                </div>
+                <p class="plan-desc">Good for casual players</p>
+                <ul class="plan-features">
+                    <li>✓ 1 VR session per month</li>
+                    <li>✓ 10% off extra sessions</li>
+                    <li>✓ Basic equipment included</li>
+                    <li>✓ Birthday discount (15%)</li>
+                    <li class="not-included">✗ Priority booking</li>
+                    <li class="not-included">✗ Premium headset</li>
+                </ul>
+                <span class="btn-outline">Select Plan</span>
+            </div>
+
+            <!-- Silver Plan - most popular -->
+            <div class="plan-card plan-selectable popular" data-plan="silver" onclick="selectPlan('silver')">
+                <div class="popular-badge">Most Popular</div>
+                <h3>Silver</h3>
+                <div class="price">
+                    <span class="currency">£</span>
+                    <span class="amount">29.99</span>
+                    <span class="period">/month</span>
+                </div>
+                <p class="plan-desc">Best value for regular players</p>
+                <ul class="plan-features">
+                    <li>✓ 3 VR sessions per month</li>
+                    <li>✓ 20% off extra sessions</li>
+                    <li>✓ Premium headset upgrade</li>
+                    <li>✓ Priority booking (7 days early)</li>
+                    <li>✓ Free friend pass every 3 months</li>
+                    <li>✓ Exclusive member events</li>
+                </ul>
+                <span class="btn-primary">Select Plan</span>
+            </div>
+
+            <!-- Gold Plan -->
+            <div class="plan-card plan-selectable" data-plan="gold" onclick="selectPlan('gold')">
+                <h3>Gold</h3>
+                <div class="price">
+                    <span class="currency">£</span>
+                    <span class="amount">44.99</span>
+                    <span class="period">/month</span>
+                </div>
+                <p class="plan-desc">Ultimate VR experience</p>
+                <ul class="plan-features">
+                    <li>✓ Unlimited VR sessions</li>
+                    <li>✓ 30% off guest tickets</li>
+                    <li>✓ Haptic feedback suit</li>
+                    <li>✓ Priority booking (14 days early)</li>
+                    <li>✓ Early access to new games</li>
+                    <li>✓ Free drinks on arrival</li>
+                    <li>✓ Monthly tournament entry</li>
+                </ul>
+                <span class="btn-outline">Select Plan</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- comparison table -->
+<section class="comparison">
+    <div class="container">
+        <h2>COMPARE PLANS</h2>
+        <div class="table-wrapper">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Bronze</th>
+                        <th>Silver</th>
+                        <th>Gold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly sessions</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Extra session discount</td>
+                        <td>10%</td>
+                        <td>20%</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>Premium headset</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Haptic suit</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Priority booking window</td>
+                        <td>No</td>
+                        <td>7 days</td>
+                        <td>14 days</td>
+                    </tr>
+                    <tr>
+                        <td>Guest passes per year</td>
+                        <td>0</td>
+                        <td>4</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Member events</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes + tournaments</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- member benefits -->
+<section class="member-benefits">
+    <div class="container">
+        <h2>ALL MEMBERS GET THESE BENEFITS</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">🎮</div>
+                <h3>Exclusive Games</h3>
+                <p>Play member-only games that regular customers can't access.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <h3>Fast Track Entry</h3>
+                <p>Skip the queue and go straight to your VR arena.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🎂</div>
+                <h3>Birthday Bonus</h3>
+                <p>Free session upgrade and 20% off for your birthday month.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">📱</div>
+                <h3>Member App</h3>
+                <p>Manage bookings and track your stats on our member app.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- member reviews -->
+<section class="member-reviews">
+    <div class="container">
+        <h2>WHAT OUR MEMBERS SAY</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="member-badge">Silver Member</div>
+                <p>"The Silver membership is perfect for me. I come twice a month and the savings really add up."</p>
+                <h4>- Alex, Manchester</h4>
+            </div>
+            <div class="review-card">
+                <div class="member-badge">Gold Member</div>
+                <p>"Unlimited sessions is amazing. The haptic suit makes such a difference. Worth every pound."</p>
+                <h4>- Sarah, London</h4>
+            </div>
+            <div class="review-card">
+                <div class="member-badge">Bronze Member</div>
+                <p>"Good for someone like me who only comes once a month. The discount on extra sessions is nice."</p>
+                <h4>- Jamie, Birmingham</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- membership faq -->
+<section class="faq-section">
+    <div class="container">
+        <h2>MEMBERSHIP FAQs</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">Can I cancel anytime?</button>
+                <div class="faq-answer">
+                    <p>Yes. All memberships are month to month. Cancel with 30 days notice.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do unused sessions roll over?</button>
+                <div class="faq-answer">
+                    <p>Bronze and Silver do not roll over. Gold members can roll over up to 2 unused sessions.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I upgrade my plan?</button>
+                <div class="faq-answer">
+                    <p>Yes. Upgrade anytime. The price difference is adjusted for the remaining month.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is there a joining fee?</button>
+                <div class="faq-answer">
+                    <p>No joining fee. Just pay your first month and you're a member.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- call to action -->
+<section class="cta">
+    <div class="container">
+        <h2>READY TO SAVE ON VR?</h2>
+        <p>Join Pulse VR membership today and start saving on every session.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn-primary signup-btn">Sign Up Now</a>
+            <a href="booking.html" class="btn-outline">Try a Session First</a>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Pulse VR</h3>
+                <p>The UK's most advanced free-roam virtual reality gaming centre.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experiences</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Shaftesbury Avenue, London</p>
+                <p>45 Deansgate, Manchester</p>
+                <p>The Cube, Birmingham</p>
+                <p>Email: hello@pulsevr.co.uk</p>
+                <p>Phone: 020 1234 5678</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pulse VR. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<button id="backToTop" class="back-to-top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

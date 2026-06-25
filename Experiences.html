@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our VR experiences at Pulse VR. From zombie survival to space adventure - find your perfect game.">
+    <meta name="keywords" content="VR experiences UK, virtual reality games, Pulse VR games">
+    <title>Pulse VR | Our VR Experiences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html">Pulse VR</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experiences.html" class="active">Experiences</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="accessibility.html#map" class="findus-btn">Find Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- page header -->
+<section class="page-header">
+    <div class="container">
+        <h1>OUR EXPERIENCES</h1>
+        <p>Choose your adventure. Each world is unique and built for groups up to 6 players.</p>
+    </div>
+</section>
+
+<!-- search and filter -->
+<section class="filter-section">
+    <div class="container">
+        <div class="filter-bar">
+            <input type="text" id="searchInput" placeholder="Search games..." class="search-box">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="horror">Horror</button>
+                <button class="filter-btn" data-filter="scifi">Sci-Fi</button>
+                <button class="filter-btn" data-filter="fantasy">Fantasy</button>
+                <button class="filter-btn" data-filter="family">Family</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- all games grid -->
+<section class="games-section">
+    <div class="container">
+        <div class="games-grid" id="gamesGrid">
+            
+            <!-- Dead Zone -->
+            <div class="game-card" data-category="action horror">
+                <img src="images/deadzone2.png" alt="Dead Zone VR game">
+                <div class="game-info">
+                    <h3>Dead Zone</h3>
+                    <p>Zombie survival horror. Work together to escape a city full of infected. Intense and scary.</p>
+                    <div class="game-details">
+                        <span>⏱️ 30 mins</span>
+                        <span>👥 2-6 players</span>
+                        <span>🔞 16+</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag">Action</span>
+                        <span class="tag">Horror</span>
+                    </div>
+                    <a href="booking.html" class="btn-small">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Galactic Explorer -->
+            <div class="game-card" data-category="scifi">
+                <img src="images/galactic2.png" alt="Galactic Explorer VR game">
+                <div class="game-info">
+                    <h3>Galactic Explorer</h3>
+                    <p>Space adventure. Fly a spaceship and discover alien planets. Good for beginners.</p>
+                    <div class="game-details">
+                        <span>⏱️ 25 mins</span>
+                        <span>👥 1-4 players</span>
+                        <span>🔞 12+</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag">Sci-Fi</span>
+                        <span class="tag">Adventure</span>
+                    </div>
+                    <a href="booking.html" class="btn-small">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Dragons Reach -->
+            <div class="game-card" data-category="fantasy action">
+                <img src="images/dragon2.png" alt="Dragons Reach VR game">
+                <div class="game-info">
+                    <h3>Dragons Reach</h3>
+                    <p>Fantasy combat. Use swords and magic to defeat dragons. Epic boss battles.</p>
+                    <div class="game-details">
+                        <span>⏱️ 30 mins</span>
+                        <span>👥 2-6 players</span>
+                        <span>🔞 14+</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag">Fantasy</span>
+                        <span class="tag">Action</span>
+                    </div>
+                    <a href="booking.html" class="btn-small">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Nightmare Manor -->
+            <div class="game-card" data-category="horror">
+                <img src="images/nightmare.png" alt="Nightmare Manor VR game">
+                <div class="game-info">
+                    <h3>Nightmare Manor</h3>
+                    <p>Psychological horror. Explore a haunted house. Very scary - not for young kids.</p>
+                    <div class="game-details">
+                        <span>⏱️ 20 mins</span>
+                        <span>👥 1-4 players</span>
+                        <span>🔞 18+</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag">Horror</span>
+                        <span class="tag">Psychological</span>
+                    </div>
+                    <a href="booking.html" class="btn-small">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Ocean Explorer -->
+            <div class="game-card" data-category="family">
+                <img src="images/ocean.png" alt="Ocean Explorer VR game">
+                <div class="game-info">
+                    <h3>Ocean Explorer</h3>
+                    <p>Educational family game. Swim with dolphins and learn about ocean conservation.</p>
+                    <div class="game-details">
+                        <span>⏱️ 20 mins</span>
+                        <span>👥 1-4 players</span>
+                        <span>🔞 7+</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag">Family</span>
+                        <span class="tag">Educational</span>
+                    </div>
+                    <a href="booking.html" class="btn-small">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Cyber Strike -->
+            <div class="game-card" data-category="action scifi">
+                <img src="images/cyber.png" alt="Cyber Strike VR game">
+                <div class="game-info">
+                    <h3>Cyber Strike</h3>
+                    <p>Fast paced cyberpunk action. Use futuristic weapons and parkour moves.</p>
+                    <div class="game-details">
+                        <span>⏱️ 25 mins</span>
+                        <span>👥 2-6 players</span>
+                        <span>🔞 16+</span>
+                    </div>
+                    <div class="game-tags">
+                        <span class="tag">Action</span>
+                        <span class="tag">Sci-Fi</span>
+                    </div>
+                    <a href="booking.html" class="btn-small">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- no results message -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>No games found. Try a different search.</p>
+        </div>
+    </div>
+</section>
+
+<!-- age rating guide -->
+<section class="age-guide">
+    <div class="container">
+        <h2>AGE RATINGS GUIDE</h2>
+        <div class="age-grid">
+            <div class="age-card">
+                <span class="age-badge">7+</span>
+                <p>Family friendly. Suitable for young children.</p>
+            </div>
+            <div class="age-card">
+                <span class="age-badge">12+</span>
+                <p>Mild action and fantasy violence.</p>
+            </div>
+            <div class="age-card">
+                <span class="age-badge">16+</span>
+                <p>Intense action, blood, strong language.</p>
+            </div>
+            <div class="age-card">
+                <span class="age-badge">18+</span>
+                <p>Extreme horror. Adults only. ID required.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- faq section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">Do I need VR experience before?</button>
+                <div class="faq-answer">
+                    <p>No. Our staff train everyone before each session. First time players are welcome.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I wear glasses with the headset?</button>
+                <div class="faq-answer">
+                    <p>Yes. The headsets fit over glasses. Tell staff when you arrive.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What if I get motion sickness?</button>
+                <div class="faq-answer">
+                    <p>Some people do. Start with Ocean Explorer or Galactic Explorer. Tell staff if you feel unwell.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I book a private session?</button>
+                <div class="faq-answer">
+                    <p>Yes. You can book the whole arena for your group. Perfect for parties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- call to action -->
+<section class="cta">
+    <div class="container">
+        <h2>READY TO PLAY?</h2>
+        <p>Book your VR experience today.</p>
+        <a href="booking.html" class="btn-primary">Book Now</a>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Pulse VR</h3>
+                <p>The UK's most advanced free-roam virtual reality gaming centre.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experiences</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Shaftesbury Avenue, London</p>
+                <p>45 Deansgate, Manchester</p>
+                <p>The Cube, Birmingham</p>
+                <p>Email: hello@pulsevr.co.uk</p>
+                <p>Phone: 020 1234 5678</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pulse VR. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<button id="backToTop" class="back-to-top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

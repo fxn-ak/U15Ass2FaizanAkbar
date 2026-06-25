@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your VR session at Pulse VR. Choose your game, date and time. Secure online booking for our London, Manchester and Birmingham venues.">
+    <meta name="keywords" content="book VR session, Pulse VR booking, VR booking UK">
+    <title>Pulse VR | Book Your VR Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- navigation bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html">Pulse VR</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="booking.html" class="active">Book Now</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="accessibility.html#map" class="findus-btn">Find Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- page header -->
+<section class="page-header">
+    <div class="container">
+        <h1>BOOK YOUR SESSION</h1>
+        <p>Fill in the form below. We'll send a confirmation email with all the details.</p>
+    </div>
+</section>
+
+<!-- booking form section -->
+<section class="booking-section">
+    <div class="container">
+        <div class="booking-wrapper">
+            
+            <!-- left side - booking form -->
+            <div class="booking-form">
+                <h2>Your Details</h2>
+                <form id="bookingForm">
+                    
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" required>
+                        <span class="error" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                        <span class="error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                        <span class="error" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game">Choose Experience *</label>
+                        <select id="game" required>
+                            <option value="">Select a game...</option>
+                            <option value="Dead Zone">Dead Zone - Zombie Survival (£25)</option>
+                            <option value="Galactic Explorer">Galactic Explorer - Space Adventure (£22)</option>
+                            <option value="Dragons Reach">Dragons Reach - Fantasy Combat (£25)</option>
+                            <option value="Nightmare Manor">Nightmare Manor - Horror (£20)</option>
+                            <option value="Ocean Explorer">Ocean Explorer - Family (£18)</option>
+                            <option value="Cyber Strike">Cyber Strike - Cyberpunk (£25)</option>
+                        </select>
+                        <span class="error" id="gameError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Select Date *</label>
+                            <input type="date" id="date" required>
+                            <span class="error" id="dateError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Select Time *</label>
+                            <select id="time" required>
+                                <option value="">Choose a time...</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                            </select>
+                            <span class="error" id="timeError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="players">Number of Players *</label>
+                        <input type="number" id="players" min="1" max="6" value="2" required>
+                        <span class="error" id="playersError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="venue">Choose Venue *</label>
+                        <select id="venue" required>
+                            <option value="">Select a venue...</option>
+                            <option value="London">London - Shaftesbury Avenue</option>
+                            <option value="Manchester">Manchester - Deansgate</option>
+                            <option value="Birmingham">Birmingham - The Cube</option>
+                        </select>
+                        <span class="error" id="venueError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Special Requirements (Optional)</label>
+                        <textarea id="comments" rows="3" placeholder="Accessibility needs, birthday notes, anything else..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the terms and conditions. Cancellations need 24 hours notice.</label>
+                        <span class="error" id="termsError"></span>
+                    </div>
+
+                    <button type="submit" class="btn-primary submit-btn">Confirm Booking</button>
+                </form>
+
+                <!-- confirmation message - shows after form submitted -->
+                <div id="confirmationMsg" class="confirmation" style="display: none;">
+                    <div class="confirmation-box">
+                        <span class="checkmark">✓</span>
+                        <h3>Booking Confirmed!</h3>
+                        <p>Thanks for booking with Pulse VR. We've sent a confirmation email with your booking details.</p>
+                        <button onclick="location.reload()" class="btn-outline">Book Another Session</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right side - pricing and info -->
+            <div class="booking-info">
+                <div class="info-card">
+                    <h3>Pricing</h3>
+                    <ul class="price-list">
+                        <li><span>Standard Games (30 mins)</span><span>£20 - £25</span></li>
+                        <li><span>Family Games (20 mins)</span><span>£18 - £20</span></li>
+                        <li><span>Premium Games</span><span>£30 - £35</span></li>
+                        <li><span>Group of 4+</span><span>10% off</span></li>
+                        <li><span>Members</span><span>20% off</span></li>
+                    </ul>
+                    <p class="price-note">Headsets and equipment included. Just bring yourself.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Opening Hours</h3>
+                    <p><strong>Monday - Thursday:</strong> 12pm - 10pm</p>
+                    <p><strong>Friday - Saturday:</strong> 10am - 11pm</p>
+                    <p><strong>Sunday:</strong> 11am - 9pm</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Locations</h3>
+                    <p><strong>London:</strong> 123 Shaftesbury Avenue, W1D 5DY</p>
+                    <p><strong>Manchester:</strong> 45 Deansgate, M3 4EN</p>
+                    <p><strong>Birmingham:</strong> The Cube, 196 Wharfside Street, B1 1RS</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Cancellation Policy</h3>
+                    <p>Free cancellation up to 24 hours before your session. After that we may charge 50% of the session cost.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- how to book steps -->
+<section class="steps-section">
+    <div class="container">
+        <h2>HOW TO BOOK</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Fill Form</h3>
+                <p>Enter your details and pick your game</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Confirm</h3>
+                <p>Check your details and submit</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Get Email</h3>
+                <p>We'll send confirmation with booking reference</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h3>Show Up</h3>
+                <p>Arrive 15 mins early for training</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- help section -->
+<section class="help-section">
+    <div class="container">
+        <div class="help-box">
+            <h3>Need Help Booking?</h3>
+            <p>Call us on <strong>020 1234 5678</strong> or email <strong>bookings@pulsevr.co.uk</strong></p>
+            <p>Our team is available 10am - 8pm Monday to Saturday.</p>
+        </div>
+    </div>
+</section>
+
+<!-- call to action for membership -->
+<section class="cta-small">
+    <div class="container">
+        <div class="cta-small-box">
+            <h3>Book regularly? Get a membership and save up to 30%</h3>
+            <a href="membership.html" class="btn-outline">View Membership Plans →</a>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Pulse VR</h3>
+                <p>The UK's most advanced free-roam virtual reality gaming centre.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experiences.html">Experiences</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Shaftesbury Avenue, London</p>
+                <p>45 Deansgate, Manchester</p>
+                <p>The Cube, Birmingham</p>
+                <p>Email: hello@pulsevr.co.uk</p>
+                <p>Phone: 020 1234 5678</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pulse VR. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<button id="backToTop" class="back-to-top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
